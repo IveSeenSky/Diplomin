@@ -1,0 +1,39 @@
+﻿<Page x:Class="Altre.Pages.ReportPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Altre.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ReportPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+            <TextBlock Text="Выберите период для отчета:" Margin="0,0,0,10"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <DatePicker x:Name="StartDatePicker" Width="150" Margin="0,0,10,0"/>
+                <TextBlock Text="по" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <DatePicker x:Name="EndDatePicker" Width="150"/>
+            </StackPanel>
+            <Button x:Name="GenerateReportBtn" 
+                    Content="Сформировать отчет" 
+                    Click="GenerateReportBtn_Click"
+                    Width="200"
+                    HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <TextBlock Grid.Row="1" 
+                   Text="Отчет будет сформирован в Excel с группировкой по должностям и информацией о выплатах"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
+                   Margin="20"/>
+    </Grid>
+</Page>

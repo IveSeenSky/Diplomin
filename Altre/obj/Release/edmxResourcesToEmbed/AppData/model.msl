@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище AltrbaseModelContainer" CdmEntityContainer="AltrbaseEntities">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="AltrbaseModel.Departments">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="department_name" ColumnName="department_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee">
+      <EntityTypeMapping TypeName="AltrbaseModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="photopath" ColumnName="photopath" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="position_id" ColumnName="position_id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="gndr_id" ColumnName="gndr_id" />
+          <ScalarProperty Name="inn" ColumnName="inn" />
+          <ScalarProperty Name="snils" ColumnName="snils" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="employment_date" ColumnName="employment_date" />
+          <ScalarProperty Name="termination_date" ColumnName="termination_date" />
+          <ScalarProperty Name="termination_reason" ColumnName="termination_reason" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gndr">
+      <EntityTypeMapping TypeName="AltrbaseModel.Gndr">
+        <MappingFragment StoreEntitySet="Gndr">
+          <ScalarProperty Name="gndr_id" ColumnName="gndr_id" />
+          <ScalarProperty Name="gndr_name" ColumnName="gndr_name" />
+          <ScalarProperty Name="shortname" ColumnName="shortname" />
+          <ScalarProperty Name="shortername" ColumnName="shortername" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="AltrbaseModel.Payments">
+        <MappingFragment StoreEntitySet="Payments">
+          <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+          <ScalarProperty Name="paymenttype_id" ColumnName="paymenttype_id" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentType">
+      <EntityTypeMapping TypeName="AltrbaseModel.PaymentType">
+        <MappingFragment StoreEntitySet="PaymentType">
+          <ScalarProperty Name="paymenttype_id" ColumnName="paymenttype_id" />
+          <ScalarProperty Name="paymenttype_name" ColumnName="paymenttype_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermConct">
+      <EntityTypeMapping TypeName="AltrbaseModel.PermConct">
+        <MappingFragment StoreEntitySet="PermConct">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="AltrbaseModel.Positions">
+        <MappingFragment StoreEntitySet="Positions">
+          <ScalarProperty Name="position_id" ColumnName="position_id" />
+          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="position_name" ColumnName="position_name" />
+          <ScalarProperty Name="job_description" ColumnName="job_description" />
+          <ScalarProperty Name="salary_range_min" ColumnName="salary_range_min" />
+          <ScalarProperty Name="salary_range_max" ColumnName="salary_range_max" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="AltrbaseModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="perms_id" ColumnName="perms_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

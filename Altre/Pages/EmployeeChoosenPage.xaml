@@ -1,0 +1,174 @@
+﻿<Page x:Class="Altre.Pages.EmployeeChoosenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Altre.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="900"
+      Title="EmployeeChoosenPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image MaxWidth="250" 
+                   Margin="5" 
+                   x:Name="ImageBox">
+            <Image.Source>
+                <Binding Path="photo">
+                    <Binding.TargetNullValue>
+                        <ImageSource>
+                            pack://application:,,,/Altre;component\Resources\avatar.png
+                        </ImageSource>
+                    </Binding.TargetNullValue>
+                </Binding>
+            </Image.Source>
+        </Image>
+        
+
+
+        <StackPanel Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Фио"
+                       Style="{StaticResource TextBlockStyle2}"
+                       HorizontalAlignment="Left"/>
+
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="firstnameTx"
+                           Text="{Binding first_name}"
+                           Style="{StaticResource TextBlockStyle3}"/>
+                <TextBlock x:Name="middlenameTx"
+                           Text="{Binding middle_name}"
+                           Style="{StaticResource TextBlockStyle3}"/>
+                <TextBlock x:Name="lastnameTx"
+                           Text="{Binding last_name}"
+                           Style="{StaticResource TextBlockStyle3}"/>
+            </StackPanel>
+
+            <TextBlock Text="Должность"
+                       Style="{StaticResource TextBlockStyle2}"
+                       HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="positionTx"
+                       HorizontalAlignment="Left"
+                       Text="{Binding Position.position_name}"
+                       Style="{StaticResource TextBlockStyle3}"/>
+
+            <TextBlock Text="Отдел"
+                       Style="{StaticResource TextBlockStyle2}"
+                       HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="departTx"
+                       HorizontalAlignment="Left"
+                       Style="{StaticResource TextBlockStyle3}"/>
+        </StackPanel>
+
+        <TextBlock Text="Пол"
+                   Style="{StaticResource TextBlockStyle2}"
+                   Grid.Row="1"/>
+        <TextBlock x:Name="genderTx" 
+                   Grid.Column="1" 
+                   Grid.Row="1" 
+                   Text="{Binding Gndr.gndr_name}"
+                   Style="{StaticResource TextBlockStyle3}"/>
+
+        <TextBlock Text="Год Рождения" 
+                   Style="{StaticResource TextBlockStyle2}" 
+                   Grid.Row="2"/>
+        <TextBlock x:Name="birthdayTx"
+                   Grid.Column="1"
+                   Grid.Row="2" 
+                   Style="{StaticResource TextBlockStyle3}"
+                   Text="{Binding birthday, StringFormat=\{0:dd.MM.yyyy\}}"/>
+
+        <TextBlock Text="ИНН"
+                   Style="{StaticResource TextBlockStyle2}"
+                   Grid.Row="3"/>
+        <TextBlock x:Name="innTx" 
+                   Grid.Column="1" 
+                   Grid.Row="3" 
+                   Text="{Binding inn}"
+                   Style="{StaticResource TextBlockStyle3}"/>
+
+        <TextBlock Text="СНИЛС"
+                   Style="{StaticResource TextBlockStyle2}"
+                   Grid.Row="4"/>
+        <TextBlock x:Name="snilsTx"
+                   Grid.Column="1"
+                   Grid.Row="4"
+                   Style="{StaticResource TextBlockStyle3}"
+                   Text="{Binding snils}"/>
+
+        <TextBlock Text="Номер телефона"
+                   Grid.Row="5"
+                   Style="{StaticResource TextBlockStyle2}"/>
+        <TextBlock x:Name="phonenumberTx"
+                   Grid.Column="1"
+                   Grid.Row="5"
+                   Style="{StaticResource TextBlockStyle3}"
+                   Text="{Binding phone_number, StringFormat=+7 \{0\}}"/>
+
+        <TextBlock Text="Почта"
+                   Grid.Row="6"
+                   Style="{StaticResource TextBlockStyle2}"/>
+        <TextBlock x:Name="emailTx"
+                   Grid.Column="1"
+                   Grid.Row="6"
+                   Style="{StaticResource TextBlockStyle3}"
+                   Text="{Binding email}"/>
+
+        <TextBlock Text="Дата приёма"
+                   Grid.Row="7"
+                   Style="{StaticResource TextBlockStyle2}"/>
+        <TextBlock x:Name="employmentdateTx"
+                   Grid.Column="1"
+                   Grid.Row="7"
+                   Style="{StaticResource TextBlockStyle3}"
+                   Text="{Binding employment_date}"/>
+
+        <TextBlock x:Name="termonationdateBx"
+                   Text="Дата увольнения"
+                   Grid.Row="8"
+                   Style="{StaticResource TextBlockStyle2}"/>
+        <TextBlock x:Name="terminationdateTx"
+                   Grid.Column="1"
+                   Grid.Row="8"
+                   Style="{StaticResource TextBlockStyle3}"
+                   Text="{Binding termination_date}"/>
+
+        <TextBlock x:Name="terminationreasonBx" Text="Причина увольнения"
+                   Grid.Row="9"
+                   Style="{StaticResource TextBlockStyle2}"/>
+        <TextBlock x:Name="terminationreasonTx"
+                   Grid.Column="1"
+                   Grid.Row="9"
+                   Style="{StaticResource TextBlockStyle3}"
+                   Text="{Binding termination_reason}"/>
+
+        <Button Grid.Column="1"
+                Grid.Row="11"
+                Style="{StaticResource ButtonStyleDefault}"
+                HorizontalAlignment="Right"
+                Margin="5"
+                Content="Изменить" 
+                Click="Button_Click"/>
+    </Grid>
+</Page>

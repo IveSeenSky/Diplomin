@@ -1,0 +1,202 @@
+﻿<Page x:Class="Altre.Pages.EmployeeEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Altre.Pages"
+      mc:Ignorable="d" FontSize="20"
+      d:DesignHeight="650" d:DesignWidth="900"
+      Title="EmployeeEditPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Фамилия"
+                   Grid.Row="0"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <TextBox Grid.Column="1"
+                 Grid.Row="0"
+                 Margin="3"
+                 x:Name="lastNameBx"
+                 Text="{Binding last_name}"/>
+
+        <TextBlock Text="Имя"
+                   Grid.Row="1"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <TextBox Grid.Column="1"
+                 Grid.Row="1"
+                 Margin="3"
+                 x:Name="firstNameBx"
+                 Text="{Binding first_name}"/>
+
+        <TextBlock Text="Отчество"
+                   Grid.Row="2"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <TextBox Grid.Column="1"
+                 Grid.Row="2"
+                 Margin="3"
+                 x:Name="middleNameBx"
+                 Text="{Binding middle_name}"/>
+
+        <TextBlock Text="Должность"
+                   Grid.Row="3"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <ComboBox Grid.Column="1"
+                  x:Name="PositionCmbx"
+                  Grid.Row="3"
+                  Margin="3"
+                  SelectedItem="{Binding Positions}"
+                  DisplayMemberPath="position_name"/>
+
+        <TextBlock Text="Год рождения"
+                   Grid.Row="4"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <DatePicker Grid.Column="1"
+                    Grid.Row="4"
+                    Margin="3"
+                    FontSize="19"
+                    x:Name="birthdayBx"
+                    Text="{Binding birthday}"/>
+
+        <TextBlock Text="Пол"
+                   Grid.Row="5"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <ComboBox Grid.Column="1"
+                  x:Name="GndrCmbx"
+                  Grid.Row="5"
+                  Margin="3"
+                  SelectedItem="{Binding Gndr}"
+                  DisplayMemberPath="gndr_name"/>
+
+        <TextBlock Text="Инн"
+                   Grid.Row="6"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <TextBox Grid.Column="1"
+                 Grid.Row="6"
+                 FontSize="19"
+                 Margin="3"
+                 x:Name="InnBx"
+                 Text="{Binding inn}"/>
+
+        <TextBlock Text="Снилс"
+               Grid.Row="7"
+               Style="{StaticResource TextBlockStyle}"/>
+        <TextBox Grid.Column="1"
+                 Grid.Row="7"
+                 Margin="3"
+                 FontSize="19"
+                 x:Name="SnilsBx"
+                 Text="{Binding snils}"/>
+
+        <TextBlock Text="Номер телефона"
+                   Grid.Row="8"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <TextBox Grid.Column="1"
+                 Grid.Row="8"
+                 Margin="3"
+                 FontSize="19"
+                 x:Name="phoneNumberBx"
+                 Text="{Binding phone_number}"/>
+
+        <TextBlock Text="Почта"
+                   Grid.Row="9"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <TextBox Grid.Column="1"
+                 Grid.Row="9"
+                 Margin="3"
+                 FontSize="19"
+                 x:Name="EmailBx"
+                 Text="{Binding email}"/>
+
+        <TextBlock Text="Принятие на работу"
+                   Grid.Row="10"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <DatePicker Grid.Column="1"
+                    Grid.Row="10"
+                    Margin="3"
+                    FontSize="13"
+                    Text="{Binding employment_date}"/>
+
+        <TextBlock Text="Увольнение"
+                   Grid.Row="11"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <DatePicker Grid.Column="1"
+                    Grid.Row="11"
+                    Margin="3"
+                    FontSize="13"
+                    Text="{Binding termination_date}"/>
+
+        <TextBlock Text="Причина"
+                   Grid.Row="12"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <TextBox Grid.Column="1"
+                 Grid.Row="12"
+                 Margin="3"
+                 FontSize="19"
+                 Text="{Binding termination_reason}"/>
+
+        <TextBlock Text="Фото"
+                   Grid.Row="13"
+                   Style="{StaticResource TextBlockStyle}"/>
+        <StackPanel Grid.Row="13" 
+                    Grid.Column="1" 
+                    Orientation="Horizontal">
+            <Button x:Name="ImagePathBtn" 
+                    Content="Обзор..."
+                    Click="ImagePathBtn_Click"
+                    Margin="5" 
+                    Width="100"
+                    Style="{StaticResource ButtonStyleDefault}"/>
+            <Button x:Name="ClearImageBtn" 
+                    Content="X"
+                    Click="ClearImageBtn_Click"
+                    Margin="5"
+                    Width="35"
+                    Style="{StaticResource ButtonStyleDefault}"/>
+            <Image MaxWidth="150" 
+                   Grid.Row="4" 
+                   Grid.Column="1"
+                   Margin="5" 
+                   x:Name="ImageBox">
+                <Image.Source>
+                    <Binding Path="photo">
+                        <Binding.TargetNullValue>
+                            <ImageSource>
+                                pack://application:,,,/Altre;component\Resources\avatar.png
+                            </ImageSource>
+                        </Binding.TargetNullValue>
+                    </Binding>
+                </Image.Source>
+            </Image>
+        </StackPanel>
+
+
+        <Button x:Name="SaveBtn"
+                Grid.Row="14"
+                Content="Сохранить"
+                Width="180"
+                Height="30"
+                Style="{StaticResource ButtonStyleDefault}" 
+                Click="SaveBtn_Click"/>
+    </Grid>
+</Page>

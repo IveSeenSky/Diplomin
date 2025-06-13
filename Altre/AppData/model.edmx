@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище AltrbaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="department_id" />
+          </Key>
+          <Property Name="department_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="department_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="employee_id" />
+          </Key>
+          <Property Name="employee_id" Type="int" Nullable="false" />
+          <Property Name="position_id" Type="int" Nullable="false" />
+          <Property Name="first_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="middle_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="last_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="birthday" Type="date" Nullable="false" />
+          <Property Name="gndr_id" Type="int" Nullable="false" />
+          <Property Name="inn" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="snils" Type="nvarchar" MaxLength="14" Nullable="false" />
+          <Property Name="phone_number" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="employment_date" Type="date" Nullable="false" />
+          <Property Name="termination_date" Type="date" />
+          <Property Name="termination_reason" Type="nvarchar(max)" />
+          <Property Name="photo" Type="image" />
+          <Property Name="photopath" Type="nvarchar" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="Gndr">
+          <Key>
+            <PropertyRef Name="gndr_id" />
+          </Key>
+          <Property Name="gndr_id" Type="int" Nullable="false" />
+          <Property Name="gndr_name" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="shortname" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="shortername" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Payments">
+          <Key>
+            <PropertyRef Name="payment_id" />
+          </Key>
+          <Property Name="payment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="employee_id" Type="int" Nullable="false" />
+          <Property Name="payment_date" Type="date" Nullable="false" />
+          <Property Name="paymenttype_id" Type="int" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PaymentType">
+          <Key>
+            <PropertyRef Name="paymenttype_id" />
+          </Key>
+          <Property Name="paymenttype_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="paymenttype_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PermConct">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="employee_id" />
+          </Key>
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="employee_id" Type="int" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Positions">
+          <Key>
+            <PropertyRef Name="position_id" />
+          </Key>
+          <Property Name="position_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="department_id" Type="int" Nullable="false" />
+          <Property Name="position_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="job_description" Type="nvarchar(max)" />
+          <Property Name="salary_range_min" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="salary_range_max" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="perms_id" Type="int" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Employee_Gndr">
+          <End Role="Gndr" Type="Self.Gndr" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gndr">
+              <PropertyRef Name="gndr_id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="gndr_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Positions">
+          <End Role="Positions" Type="Self.Positions" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Positions">
+              <PropertyRef Name="position_id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="position_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payments_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="employee_id" />
+            </Principal>
+            <Dependent Role="Payments">
+              <PropertyRef Name="employee_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payments_PaymentType">
+          <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="1" />
+          <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentType">
+              <PropertyRef Name="paymenttype_id" />
+            </Principal>
+            <Dependent Role="Payments">
+              <PropertyRef Name="paymenttype_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PermConct_Employee1">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="PermConct" Type="Self.PermConct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="employee_id" />
+            </Principal>
+            <Dependent Role="PermConct">
+              <PropertyRef Name="employee_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PermConct_Users1">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="PermConct" Type="Self.PermConct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="PermConct">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Positions_Departments">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="Positions" Type="Self.Positions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="department_id" />
+            </Principal>
+            <Dependent Role="Positions">
+              <PropertyRef Name="department_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище AltrbaseModelContainer">
+          <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gndr" EntityType="Self.Gndr" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentType" EntityType="Self.PaymentType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermConct" EntityType="Self.PermConct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Positions" EntityType="Self.Positions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Employee_Gndr" Association="Self.FK_Employee_Gndr">
+            <End Role="Gndr" EntitySet="Gndr" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Positions" Association="Self.FK_Employee_Positions">
+            <End Role="Positions" EntitySet="Positions" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payments_Employee" Association="Self.FK_Payments_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Payments" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payments_PaymentType" Association="Self.FK_Payments_PaymentType">
+            <End Role="PaymentType" EntitySet="PaymentType" />
+            <End Role="Payments" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PermConct_Employee1" Association="Self.FK_PermConct_Employee1">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="PermConct" EntitySet="PermConct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PermConct_Users1" Association="Self.FK_PermConct_Users1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="PermConct" EntitySet="PermConct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Positions_Departments" Association="Self.FK_Positions_Departments">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Positions" EntitySet="Positions" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AltrbaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="department_id" />
+          </Key>
+          <Property Name="department_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="department_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Positions" Relationship="Self.FK_Positions_Departments" FromRole="Departments" ToRole="Positions" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="employee_id" />
+          </Key>
+          <Property Name="employee_id" Type="Int32" Nullable="false" />
+          <Property Name="position_id" Type="Int32" Nullable="false" />
+          <Property Name="first_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="middle_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="birthday" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="gndr_id" Type="Int32" Nullable="false" />
+          <Property Name="inn" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="snils" Type="String" MaxLength="14" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone_number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="employment_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="termination_date" Type="DateTime" Precision="0" />
+          <Property Name="termination_reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Gndr" Relationship="Self.FK_Employee_Gndr" FromRole="Employee" ToRole="Gndr" />
+          <NavigationProperty Name="Positions" Relationship="Self.FK_Employee_Positions" FromRole="Employee" ToRole="Positions" />
+          <NavigationProperty Name="Payments" Relationship="Self.FK_Payments_Employee" FromRole="Employee" ToRole="Payments" />
+          <NavigationProperty Name="PermConct" Relationship="Self.FK_PermConct_Employee1" FromRole="Employee" ToRole="PermConct" />
+          <Property Name="photopath" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Gndr">
+          <Key>
+            <PropertyRef Name="gndr_id" />
+          </Key>
+          <Property Name="gndr_id" Type="Int32" Nullable="false" />
+          <Property Name="gndr_name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="shortname" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="shortername" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Gndr" FromRole="Gndr" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Payments">
+          <Key>
+            <PropertyRef Name="payment_id" />
+          </Key>
+          <Property Name="payment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="employee_id" Type="Int32" Nullable="false" />
+          <Property Name="payment_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="paymenttype_id" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Payments_Employee" FromRole="Payments" ToRole="Employee" />
+          <NavigationProperty Name="PaymentType" Relationship="Self.FK_Payments_PaymentType" FromRole="Payments" ToRole="PaymentType" />
+        </EntityType>
+        <EntityType Name="PaymentType">
+          <Key>
+            <PropertyRef Name="paymenttype_id" />
+          </Key>
+          <Property Name="paymenttype_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="paymenttype_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Payments" Relationship="Self.FK_Payments_PaymentType" FromRole="PaymentType" ToRole="Payments" />
+        </EntityType>
+        <EntityType Name="PermConct">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="employee_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="employee_id" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_PermConct_Employee1" FromRole="PermConct" ToRole="Employee" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_PermConct_Users1" FromRole="PermConct" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Positions">
+          <Key>
+            <PropertyRef Name="position_id" />
+          </Key>
+          <Property Name="position_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="department_id" Type="Int32" Nullable="false" />
+          <Property Name="position_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="job_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="salary_range_min" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="salary_range_max" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Departments" Relationship="Self.FK_Positions_Departments" FromRole="Positions" ToRole="Departments" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Positions" FromRole="Positions" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="perms_id" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PermConct" Relationship="Self.FK_PermConct_Users1" FromRole="Users" ToRole="PermConct" />
+        </EntityType>
+        <Association Name="FK_Positions_Departments">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="Positions" Type="Self.Positions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="department_id" />
+            </Principal>
+            <Dependent Role="Positions">
+              <PropertyRef Name="department_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Gndr">
+          <End Role="Gndr" Type="Self.Gndr" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gndr">
+              <PropertyRef Name="gndr_id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="gndr_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Positions">
+          <End Role="Positions" Type="Self.Positions" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Positions">
+              <PropertyRef Name="position_id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="position_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payments_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="employee_id" />
+            </Principal>
+            <Dependent Role="Payments">
+              <PropertyRef Name="employee_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PermConct_Employee1">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="PermConct" Type="Self.PermConct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="employee_id" />
+            </Principal>
+            <Dependent Role="PermConct">
+              <PropertyRef Name="employee_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payments_PaymentType">
+          <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="1" />
+          <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentType">
+              <PropertyRef Name="paymenttype_id" />
+            </Principal>
+            <Dependent Role="Payments">
+              <PropertyRef Name="paymenttype_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PermConct_Users1">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="PermConct" Type="Self.PermConct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="PermConct">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AltrbaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Departments" EntityType="Self.Departments" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" />
+          <EntitySet Name="Gndr" EntityType="Self.Gndr" />
+          <EntitySet Name="Payments" EntityType="Self.Payments" />
+          <EntitySet Name="PaymentType" EntityType="Self.PaymentType" />
+          <EntitySet Name="PermConct" EntityType="Self.PermConct" />
+          <EntitySet Name="Positions" EntityType="Self.Positions" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="FK_Positions_Departments" Association="Self.FK_Positions_Departments">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Positions" EntitySet="Positions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Gndr" Association="Self.FK_Employee_Gndr">
+            <End Role="Gndr" EntitySet="Gndr" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Positions" Association="Self.FK_Employee_Positions">
+            <End Role="Positions" EntitySet="Positions" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payments_Employee" Association="Self.FK_Payments_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Payments" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PermConct_Employee1" Association="Self.FK_PermConct_Employee1">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="PermConct" EntitySet="PermConct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payments_PaymentType" Association="Self.FK_Payments_PaymentType">
+            <End Role="PaymentType" EntitySet="PaymentType" />
+            <End Role="Payments" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PermConct_Users1" Association="Self.FK_PermConct_Users1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="PermConct" EntitySet="PermConct" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище AltrbaseModelContainer" CdmEntityContainer="AltrbaseEntities">
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="AltrbaseModel.Departments">
+              <MappingFragment StoreEntitySet="Departments">
+                <ScalarProperty Name="department_id" ColumnName="department_id" />
+                <ScalarProperty Name="department_name" ColumnName="department_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee">
+            <EntityTypeMapping TypeName="AltrbaseModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="photopath" ColumnName="photopath" />
+                <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+                <ScalarProperty Name="position_id" ColumnName="position_id" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="birthday" ColumnName="birthday" />
+                <ScalarProperty Name="gndr_id" ColumnName="gndr_id" />
+                <ScalarProperty Name="inn" ColumnName="inn" />
+                <ScalarProperty Name="snils" ColumnName="snils" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="employment_date" ColumnName="employment_date" />
+                <ScalarProperty Name="termination_date" ColumnName="termination_date" />
+                <ScalarProperty Name="termination_reason" ColumnName="termination_reason" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gndr">
+            <EntityTypeMapping TypeName="AltrbaseModel.Gndr">
+              <MappingFragment StoreEntitySet="Gndr">
+                <ScalarProperty Name="gndr_id" ColumnName="gndr_id" />
+                <ScalarProperty Name="gndr_name" ColumnName="gndr_name" />
+                <ScalarProperty Name="shortname" ColumnName="shortname" />
+                <ScalarProperty Name="shortername" ColumnName="shortername" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payments">
+            <EntityTypeMapping TypeName="AltrbaseModel.Payments">
+              <MappingFragment StoreEntitySet="Payments">
+                <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+                <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+                <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+                <ScalarProperty Name="paymenttype_id" ColumnName="paymenttype_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentType">
+            <EntityTypeMapping TypeName="AltrbaseModel.PaymentType">
+              <MappingFragment StoreEntitySet="PaymentType">
+                <ScalarProperty Name="paymenttype_id" ColumnName="paymenttype_id" />
+                <ScalarProperty Name="paymenttype_name" ColumnName="paymenttype_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PermConct">
+            <EntityTypeMapping TypeName="AltrbaseModel.PermConct">
+              <MappingFragment StoreEntitySet="PermConct">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Positions">
+            <EntityTypeMapping TypeName="AltrbaseModel.Positions">
+              <MappingFragment StoreEntitySet="Positions">
+                <ScalarProperty Name="position_id" ColumnName="position_id" />
+                <ScalarProperty Name="department_id" ColumnName="department_id" />
+                <ScalarProperty Name="position_name" ColumnName="position_name" />
+                <ScalarProperty Name="job_description" ColumnName="job_description" />
+                <ScalarProperty Name="salary_range_min" ColumnName="salary_range_min" />
+                <ScalarProperty Name="salary_range_max" ColumnName="salary_range_max" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="AltrbaseModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="perms_id" ColumnName="perms_id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

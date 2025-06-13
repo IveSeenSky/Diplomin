@@ -1,0 +1,59 @@
+﻿<Application x:Class="Altre.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Altre"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!--TextBox-->
+        <Style x:Key="TextBoxLoginStyle" TargetType="TextBox">
+        </Style>
+
+        <!--TextBlock-->
+        <Style x:Key="TextBlockLoginStyle" TargetType="TextBlock">
+        </Style>
+
+        <!--Button-->
+        <Style x:Key="ButtonStyleDefault" TargetType="Button">
+            <Setter Property="Background" Value="#4E6E58"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="Margin" Value="2.5 5"/>
+            <Setter Property="Width" Value="150"/>
+        </Style>
+
+        <!--Button-->
+        <Style x:Key="ButtonMenuStyle" TargetType="Button">
+            <Setter Property="Background" Value="#4E6E58"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="Margin" Value="5 2.5"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+
+        </Style>
+
+        <!--TextBlock-->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+
+        <!--TextBlock-->
+        <Style x:Key="TextBlockStyle2" TargetType="TextBlock">
+            <Setter Property="Margin" Value="5 2.5"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>   
+        
+        <!--TextBlock-->
+        <Style x:Key="TextBlockStyle3" TargetType="TextBlock">
+            <Setter Property="Margin" Value="5 2.5"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Application.Resources>
+</Application>

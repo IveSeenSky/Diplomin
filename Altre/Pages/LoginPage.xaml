@@ -1,0 +1,28 @@
+﻿<Page x:Class="Altre.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Altre.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1100"
+      Title="LoginPage">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Label Content="Войдите в аккаунт"
+                   FontSize="25"/>
+            <TextBlock Text="логин / почта"
+                       Style="{StaticResource TextBlockLoginStyle}"/>
+            <TextBox x:Name="LoginBx"/>
+            
+            <TextBlock Text="пароль"
+                       Style="{StaticResource TextBlockLoginStyle}"/>
+            <PasswordBox x:Name="PasswordBx"/>
+            <Button x:Name="LoginBtn"
+                    Content="Войти"
+                    Margin="5 5 5 80" Click="LoginBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

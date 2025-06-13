@@ -1,0 +1,68 @@
+﻿<Page x:Class="Altre.Pages.PaymentChoosenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Altre.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PaymentChoosenPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1"
+                   Text="Сотрудник:"
+                   Style="{StaticResource TextBlockStyle2}"/>
+
+        <TextBlock Grid.Row="2"
+                   Text="Сумма выплаты:"
+                   Style="{StaticResource TextBlockStyle2}"/>
+
+        <TextBlock Grid.Row="3"
+                   Text="Вид выплаты:"
+                   Style="{StaticResource TextBlockStyle2}"/>
+
+        <TextBlock Grid.Row="4"
+                   Text="Дата выплаты:"
+                   Style="{StaticResource TextBlockStyle2}"/>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="1" 
+                    Orientation="Horizontal">
+            <TextBlock Style="{StaticResource TextBlockStyle3}" 
+                       Text="{Binding Employee.first_name}"/>
+            <TextBlock Style="{StaticResource TextBlockStyle3}" 
+                       Text="{Binding Employee.middle_name}"/>
+            <TextBlock Style="{StaticResource TextBlockStyle3}" 
+                       Text="{Binding Employee.last_name}"/>
+        </StackPanel>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="2"
+                   Style="{StaticResource TextBlockStyle3}"
+                   Text="{Binding amount, StringFormat=\{0:N\} руб.}"/>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="3"
+                   Text="{Binding PaymentType.paymenttype_name}"
+                   Style="{StaticResource TextBlockStyle3}"/>
+
+        <TextBlock Grid.Row="4"
+                   Grid.Column="1"
+                   Text="{Binding payment_date, StringFormat=\{0:dd.MM.yyyy\}}"
+                   Style="{StaticResource TextBlockStyle3}"/>
+    </Grid>
+</Page>
