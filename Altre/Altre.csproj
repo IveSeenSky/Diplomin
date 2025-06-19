@@ -140,7 +140,6 @@
       <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\ReportConstructor.cs" />
-    <Compile Include="AppData\Reports.cs" />
     <Compile Include="AppData\Users.cs">
       <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>

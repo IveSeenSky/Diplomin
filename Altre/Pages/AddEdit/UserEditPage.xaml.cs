@@ -44,23 +44,6 @@ namespace Altre.Pages.AddEdit
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (!ConnectionDB.GetCont().Users.Any(x => x.username.Equals(LoginBx.Text)))
-            {
-                Users users = new Users();
-                users.username = LoginBx.Text;
-                users.password = PassBx.Text;
-                users.perms_id = FindPerms();
-
-                try
-                {
-                    ConnectionDB.GetCont().Users.Add(users);
-                    ConnectionDB.GetCont().SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
 
             if (checkNew)
             {

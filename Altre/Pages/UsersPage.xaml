@@ -70,14 +70,6 @@
         <StackPanel HorizontalAlignment="Left"
                     Grid.Row="1"
                     Orientation="Horizontal">
-            <Button x:Name="AddBtn"
-                    Content="Добавить"
-                    Margin="5"
-                    Style="{StaticResource ButtonStyleDefault}" Click="AddBtn_Click"/>
-            <Button x:Name="DelBtn"
-                    Content="Удалить"
-                    Style="{StaticResource ButtonStyleDefault}"
-                    Margin="0 5" Click="DelBtn_Click"/>
             <Button x:Name="UpdBtn"
                     Content="Обновить"
                     Style="{StaticResource ButtonStyleDefault}"

@@ -24,6 +24,7 @@ namespace Altre.Pages
     public partial class EmployeeEditPage : Page
     {
         bool checkNew;
+        bool result;
         string pathImage;
         static Employee employee;
         public EmployeeEditPage(Employee empl)
@@ -142,16 +143,16 @@ namespace Altre.Pages
                 }
 
                 //Номер телефона
-                else if (string.IsNullOrEmpty(phoneNumberBx.Text)
-                    && IsOnlyDigitsAndSpaces(phoneNumberBx.Text)) 
-                { 
+                else if (string.IsNullOrEmpty(phoneNumberBx.Text) || !IsOnlyDigits(phoneNumberBx.Text))
+                {
                     MessageBox.Show("Ошибка сохранения данных: " +
-                                    "неверный формат номера телефона" + "\n" + "Пример: 9009201282",
+                                    "неверный формат номера телефона" + "\n" + "Допустимы только цифры. Пример: 9009201282",
                                     "Ошибка",
                                     MessageBoxButton.OK,
                                     MessageBoxImage.Error);
                     return false;
                 }
+
                 else
                 {
                     return true;
@@ -159,14 +160,14 @@ namespace Altre.Pages
 
             }
 
-            bool IsOnlyDigitsAndSpaces(string str)
+            bool IsOnlyDigits(string str)
             {
                 foreach (char c in str)
                 {
-                    if (!char.IsDigit(c) && !char.IsWhiteSpace(c))
+                    if (!char.IsDigit(c))
                         return false;
                 }
-                return true;
+                return str.Length > 0;
             }
         }
     }

@@ -58,13 +58,14 @@ namespace Altre.AppData
 
             if (Currect.curUser.perms_id != 0)
             {
-                foreach (var item in paymen)
-                {
-
-                    var CurEmpl = ConnectionDB.GetCont().Employee.FirstOrDefault(y => y.employee_id == item.employee_id);
-                    var curDep = ConnectionDB.GetCont().Departments.FirstOrDefault(z => z.department_id == Currect.curDepartment.department_id);
-                    if(curDep != null)
-                        payments.Add(item);
+                if (Currect.EmployeeList != null)
+                { 
+                    foreach (var item in Currect.EmployeeList)
+                    {
+                        var sPaymnt = ConnectionDB.GetCont().Payments.Where(x => x.employee_id == item.employee_id);
+                        foreach (var item2 in sPaymnt)
+                            payments.Add(item2);
+                    }
                 }
             }
             else
@@ -76,7 +77,7 @@ namespace Altre.AppData
             int currentRow = 4;
             foreach (var payment in payments)
             {
-                var employee = payment.Employee;
+                var employee = ConnectionDB.GetCont().Employee.FirstOrDefault(x => x.employee_id == payment.employee_id);
                 var position = ConnectionDB.GetCont().Positions.FirstOrDefault(p => p.position_id == employee.position_id);
                 var department = position != null ? ConnectionDB.GetCont().Departments.FirstOrDefault(d => d.department_id == position.department_id) : null;
                 var gender = ConnectionDB.GetCont().Gndr.FirstOrDefault(g => g.gndr_id == employee.gndr_id);
