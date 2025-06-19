@@ -88,7 +88,7 @@
             <TextBox x:Name="SearchBx"
                      Width="150" Margin="5 5" TextChanged="SearchBx_TextChanged"/>
             <Button x:Name="UpdateBtn"
-                    Content="История выплат"
+                    Content="Подгрузка"
                     Style="{StaticResource ButtonStyleDefault}"
                     Click="UpdateBtn_Click"/>
         </StackPanel>

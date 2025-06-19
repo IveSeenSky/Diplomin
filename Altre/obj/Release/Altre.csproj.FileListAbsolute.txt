@@ -57,7 +57,6 @@ C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\AddEdit\Positio
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\AddEdit\UserEditPage.g.cs
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\Choosen\EmployeeChoosenPage.g.cs
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\AddEdit\EmployeeEditPage.g.cs
-C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\DepartmentsPage.g.cs
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\EmployeesPage.g.cs
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\LoginPage.g.cs
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\Choosen\PaymentChoosenPage.g.cs
@@ -77,7 +76,6 @@ C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\AddEdit\Positio
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\AddEdit\UserEditPage.baml
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\Choosen\EmployeeChoosenPage.baml
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\AddEdit\EmployeeEditPage.baml
-C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\DepartmentsPage.baml
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\EmployeesPage.baml
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\LoginPage.baml
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\Choosen\PaymentChoosenPage.baml
@@ -94,5 +92,3 @@ C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Altre.exe
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Altre.pdb
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\bin\Release\Altrbase.mdf
 C:\Users\berdn\Documents\GitHub\Diplomin\Altre\bin\Release\Altrbase_log.ldf
-C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\Choosen\UserChoosenPage.g.cs
-C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Release\Pages\Choosen\UserChoosenPage.baml

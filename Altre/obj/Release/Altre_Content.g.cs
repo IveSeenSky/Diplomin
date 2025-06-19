@@ -10,7 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("altrbase.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("altrbase_log.ldf")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/model.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/model.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/modelbase.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/modelbase.tt")]
 
 
