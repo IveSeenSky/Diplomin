@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="88355c4d2d724845b148c9de97ef61f6" Name="Diagram1">
+      <Diagram DiagramId="2a9b903a741542348d78cbd13202920f" Name="Diagram1">
         <EntityTypeShape EntityType="AltrbaseModel.Departments" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="AltrbaseModel.Employee" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AltrbaseModel.Employee" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="AltrbaseModel.Gndr" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AltrbaseModel.Payments" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="AltrbaseModel.PaymentType" Width="1.5" PointX="5.25" PointY="12" IsExpanded="true" />

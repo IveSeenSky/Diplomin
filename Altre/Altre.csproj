@@ -83,6 +83,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Frames\MenuAdminFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Frames\MenuFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -97,47 +101,51 @@
     </Compile>
     <Compile Include="AppData\ConnectionDB.cs" />
     <Compile Include="AppData\Currect.cs" />
+    <Compile Include="AppData\CustomEmployee.cs" />
     <Compile Include="AppData\Departments.cs">
-      <DependentUpon>model.tt</DependentUpon>
+      <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\Employee.cs">
-      <DependentUpon>model.tt</DependentUpon>
+      <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\Gndr.cs">
-      <DependentUpon>model.tt</DependentUpon>
+      <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="AppData\model.Context.cs">
+    <Compile Include="AppData\ModelBase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>model.Context.tt</DependentUpon>
+      <DependentUpon>ModelBase.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="AppData\model.cs">
+    <Compile Include="AppData\ModelBase.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>model.tt</DependentUpon>
+      <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="AppData\model.Designer.cs">
+    <Compile Include="AppData\ModelBase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>model.edmx</DependentUpon>
+      <DependentUpon>ModelBase.edmx</DependentUpon>
     </Compile>
     <Compile Include="AppData\Nav.cs" />
     <Compile Include="AppData\Payments.cs">
-      <DependentUpon>model.tt</DependentUpon>
+      <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\PaymentType.cs">
-      <DependentUpon>model.tt</DependentUpon>
+      <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\PermConct.cs">
-      <DependentUpon>model.tt</DependentUpon>
+      <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\Positions.cs">
-      <DependentUpon>model.tt</DependentUpon>
+      <DependentUpon>ModelBase.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\ReportConstructor.cs" />
     <Compile Include="AppData\Reports.cs" />
     <Compile Include="AppData\Users.cs">
-      <DependentUpon>model.tt</DependentUpon>
+      <DependentUpon>ModelBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\MenuAdminFrame.xaml.cs">
+      <DependentUpon>MenuAdminFrame.xaml</DependentUpon>
     </Compile>
     <Compile Include="Frames\MenuFrame.xaml.cs">
       <DependentUpon>MenuFrame.xaml</DependentUpon>
@@ -146,11 +154,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\EmployeeChoosenPage.xaml">
+    <Page Include="Pages\AddEdit\PositionsEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EmployeeEditPage.xaml">
+    <Page Include="Pages\AddEdit\UserEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Choosen\EmployeeChoosenPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddEdit\EmployeeEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,7 +178,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PaymentChoosenPage.xaml">
+    <Page Include="Pages\Choosen\PaymentChoosenPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,16 +186,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PositionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ReportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UsersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\EmployeeChoosenPage.xaml.cs">
+    <Compile Include="Pages\AddEdit\PositionsEditPage.xaml.cs">
+      <DependentUpon>PositionsEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEdit\UserEditPage.xaml.cs">
+      <DependentUpon>UserEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Choosen\EmployeeChoosenPage.xaml.cs">
       <DependentUpon>EmployeeChoosenPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EmployeeEditPage.xaml.cs">
+    <Compile Include="Pages\AddEdit\EmployeeEditPage.xaml.cs">
       <DependentUpon>EmployeeEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\EmployeesPage.xaml.cs">
@@ -188,14 +218,20 @@
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PaymentChoosenPage.xaml.cs">
+    <Compile Include="Pages\Choosen\PaymentChoosenPage.xaml.cs">
       <DependentUpon>PaymentChoosenPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PaymentPage.xaml.cs">
       <DependentUpon>PaymentPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PositionsPage.xaml.cs">
+      <DependentUpon>PositionsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ReportPage.xaml.cs">
       <DependentUpon>ReportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UsersPage.xaml.cs">
+      <DependentUpon>UsersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -214,12 +250,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="AppData\model.edmx">
+    <EntityDeploy Include="AppData\ModelBase.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>model.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelBase.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="AppData\model.edmx.diagram">
-      <DependentUpon>model.edmx</DependentUpon>
+    <None Include="AppData\ModelBase.edmx.diagram">
+      <DependentUpon>ModelBase.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -289,16 +325,18 @@
       <DependentUpon>Altrbase.mdf</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="AppData\model.Context.tt">
+    <Content Include="AppData\ModelBase.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>model.edmx</DependentUpon>
-      <LastGenOutput>model.Context.cs</LastGenOutput>
+      <DependentUpon>ModelBase.edmx</DependentUpon>
+      <LastGenOutput>ModelBase.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="AppData\model.tt">
+    <Content Include="AppData\ModelBase.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>model.edmx</DependentUpon>
-      <LastGenOutput>model.cs</LastGenOutput>
+      <DependentUpon>ModelBase.edmx</DependentUpon>
+      <LastGenOutput>ModelBase.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\fullLogo.png" />
+    <Resource Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

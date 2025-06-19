@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище AltrbaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище AltrbaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Departments">
           <Key>
             <PropertyRef Name="department_id" />
@@ -77,7 +77,7 @@
           <Property Name="position_name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="job_description" Type="nvarchar(max)" />
           <Property Name="salary_range_min" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="salary_range_max" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="salary_range_max" Type="decimal" Precision="10" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -210,7 +210,8 @@
             <End Role="Positions" EntitySet="Positions" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AltrbaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -241,11 +242,11 @@
           <Property Name="termination_date" Type="DateTime" Precision="0" />
           <Property Name="termination_reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="photopath" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Gndr" Relationship="Self.FK_Employee_Gndr" FromRole="Employee" ToRole="Gndr" />
           <NavigationProperty Name="Positions" Relationship="Self.FK_Employee_Positions" FromRole="Employee" ToRole="Positions" />
           <NavigationProperty Name="Payments" Relationship="Self.FK_Payments_Employee" FromRole="Employee" ToRole="Payments" />
           <NavigationProperty Name="PermConct" Relationship="Self.FK_PermConct_Employee1" FromRole="Employee" ToRole="PermConct" />
-          <Property Name="photopath" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Gndr">
           <Key>
@@ -297,7 +298,7 @@
           <Property Name="position_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="job_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="salary_range_min" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="salary_range_max" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="salary_range_max" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <NavigationProperty Name="Departments" Relationship="Self.FK_Positions_Departments" FromRole="Positions" ToRole="Departments" />
           <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Positions" FromRole="Positions" ToRole="Employee" />
         </EntityType>
@@ -450,7 +451,6 @@
           <EntitySetMapping Name="Employee">
             <EntityTypeMapping TypeName="AltrbaseModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
-                <ScalarProperty Name="photopath" ColumnName="photopath" />
                 <ScalarProperty Name="employee_id" ColumnName="employee_id" />
                 <ScalarProperty Name="position_id" ColumnName="position_id" />
                 <ScalarProperty Name="first_name" ColumnName="first_name" />
@@ -466,6 +466,7 @@
                 <ScalarProperty Name="termination_date" ColumnName="termination_date" />
                 <ScalarProperty Name="termination_reason" ColumnName="termination_reason" />
                 <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="photopath" ColumnName="photopath" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

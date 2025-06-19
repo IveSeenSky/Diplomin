@@ -1,0 +1,38 @@
+﻿<Page x:Class="Altre.Frames.MenuAdminFrame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Altre.Frames"
+      mc:Ignorable="d" 
+      d:DesignHeight="740" d:DesignWidth="200"
+      Title="MenuAdminFrame">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Button x:Name="EmplBtn"
+                 Content="Сотрудники"
+                 Style="{StaticResource ButtonMenuStyle}" Click="EmplBtn_Click"/>
+            <Button x:Name="PositionBtn"
+                    Content="Должности"
+                    Style="{StaticResource ButtonMenuStyle}" Click="PositionBtn_Click"/>
+            <Button x:Name="PmntBtn"
+                 Content="Выплаты"
+                 Style="{StaticResource ButtonMenuStyle}" Click="PmntBtn_Click"/>
+            <Button x:Name="UsersBtn"
+                    Content="Пользователи"
+                    Style="{StaticResource ButtonMenuStyle}" Click="UsersBtn_Click"/>
+            <Button x:Name="RprtBtn"
+                 Content="Отчёты"
+                 Style="{StaticResource ButtonMenuStyle}" Click="RprtBtn_Click"/>
+        </StackPanel>
+        <Button x:Name="ExitBtn"
+             Grid.Row="1"
+             Content="Выход"
+             Style="{StaticResource ButtonMenuStyle}" Click="ExitBtn_Click"/>
+    </Grid>
+</Page>

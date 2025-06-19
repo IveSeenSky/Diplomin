@@ -29,12 +29,22 @@ namespace Altre.Frames
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void RprtBtn_Click(object sender, RoutedEventArgs e)
         {
             Nav.MFrame.Navigate(new ReportPage());
+        }
+
+        private void EmplBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Nav.MFrame.Navigate(new EmployeesPage());
+        }
+
+        private void PmntBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Nav.MFrame.Navigate(new PaymentPage(null));
         }
     }
 }

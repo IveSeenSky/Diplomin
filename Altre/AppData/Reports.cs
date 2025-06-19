@@ -38,12 +38,28 @@ namespace Altre.AppData
             sheet.Cells[1, 14] = "Количество выплат";
 
             // Получаем данные с фильтрацией по дате
-            var employees = ConnectionDB.GetCont().Employee
+            var employe = ConnectionDB.GetCont().Employee
                 .Where(e => (!startDate.HasValue || e.employment_date >= startDate) &&
                            (!endDate.HasValue || e.employment_date <= endDate))
                 .OrderBy(e => e.Positions.position_name)
                 .ThenBy(e => e.last_name)
                 .ToList();
+
+            List<Employee> employees = new List<Employee>();
+
+            if (Currect.curUser.perms_id != 0)
+            {
+                foreach (var employee in employe)
+                {
+                    var CurPos = ConnectionDB.GetCont().Positions.FirstOrDefault(y => y.position_id == employee.position_id);
+                    var curDep = ConnectionDB.GetCont().Departments.FirstOrDefault(z => z.department_id == CurPos.department_id);
+                    employees.Add(employee);
+                }
+            }
+            else
+            {
+                employees = employe.ToList();
+            }
 
             // Заполнение данных
             var currentRow = 2;

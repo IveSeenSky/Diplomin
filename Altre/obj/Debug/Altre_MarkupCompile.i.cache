@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\berdn\source\repos\Altre\Altre\obj\Debug\
+C:\Users\berdn\Documents\GitHub\Diplomin\Altre\obj\Debug\
 Altre
 none
 false
 DEBUG;TRACE
-C:\Users\berdn\source\repos\Altre\Altre\App.xaml
-9-732944140
-4340763359
-30-1995063485
-191649614429
-Frames\MenuFrame.xaml;MainWindow.xaml;Pages\EmployeeChoosenPage.xaml;Pages\EmployeeEditPage.xaml;Pages\EmployeesPage.xaml;Pages\LoginPage.xaml;Pages\PaymentChoosenPage.xaml;Pages\PaymentPage.xaml;Pages\ReportPage.xaml;
+C:\Users\berdn\Documents\GitHub\Diplomin\Altre\App.xaml
+141740791795
+41973961663
+362107386649
+1985352864
+Frames\MenuAdminFrame.xaml;Frames\MenuFrame.xaml;MainWindow.xaml;Pages\AddEdit\PositionsEditPage.xaml;Pages\AddEdit\UserEditPage.xaml;Pages\Choosen\EmployeeChoosenPage.xaml;Pages\AddEdit\EmployeeEditPage.xaml;Pages\EmployeesPage.xaml;Pages\LoginPage.xaml;Pages\Choosen\PaymentChoosenPage.xaml;Pages\PaymentPage.xaml;Pages\PositionsPage.xaml;Pages\ReportPage.xaml;Pages\UsersPage.xaml;
 
 False
 

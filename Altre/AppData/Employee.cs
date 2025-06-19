@@ -11,7 +11,8 @@ namespace Altre.AppData
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Employee
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,7 +21,8 @@ namespace Altre.AppData
             this.Payments = new HashSet<Payments>();
             this.PermConct = new HashSet<PermConct>();
         }
-    
+   
+
         public int employee_id { get; set; }
         public int position_id { get; set; }
         public string first_name { get; set; }

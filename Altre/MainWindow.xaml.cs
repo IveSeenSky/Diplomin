@@ -30,48 +30,12 @@ namespace Altre
             Nav.TFrame = TipeFrame;
             Nav.Fullframe = FullFrame;
             Nav.Fullframe.Navigate(new LoginPage());
-            
-            //ImgImport(@"..\..\Photos");
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             if (Nav.MFrame.CanGoBack) 
                 Nav.MFrame.GoBack();
-        }
-
-        public static void ImgImport(string st)
-        {
-            try
-            {
-                var context = ConnectionDB.GetCont();
-                var images = Directory.GetFiles(System.IO.Path.GetFullPath(st));
-                var employees = context.Employee.ToList();
-
-                foreach (var empl in employees)
-                {
-                    if (string.IsNullOrEmpty(empl.photopath))
-                        continue;
-
-                    var matchingImage = images.FirstOrDefault(x => x.Contains(empl.photopath));
-                    if (matchingImage != null)
-                    {
-                        try
-                        {
-                            empl.photo = File.ReadAllBytes(matchingImage);
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Ошибка при чтении файла для сотрудника {empl.last_name}: {ex.Message}");
-                        }
-                    }
-                }
-                context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при импорте изображений: {ex.Message}");
-            }
         }
     }
 }

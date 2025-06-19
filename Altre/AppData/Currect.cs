@@ -11,6 +11,7 @@ namespace Altre.AppData
     internal class Currect
     {
         public static Users curUser;
+        public static PermConct curPermCon;
         public static Employee curEmployee
         {
             get

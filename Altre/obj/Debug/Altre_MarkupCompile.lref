@@ -1,12 +1,17 @@
 ﻿
-FC:\Users\berdn\source\repos\Altre\Altre\App.xaml;;
-FC:\Users\berdn\source\repos\Altre\Altre\Frames\MenuFrame.xaml;;
-FC:\Users\berdn\source\repos\Altre\Altre\MainWindow.xaml;;
-FC:\Users\berdn\source\repos\Altre\Altre\Pages\EmployeeChoosenPage.xaml;;
-FC:\Users\berdn\source\repos\Altre\Altre\Pages\EmployeeEditPage.xaml;;
-FC:\Users\berdn\source\repos\Altre\Altre\Pages\EmployeesPage.xaml;;
-FC:\Users\berdn\source\repos\Altre\Altre\Pages\LoginPage.xaml;;
-FC:\Users\berdn\source\repos\Altre\Altre\Pages\PaymentChoosenPage.xaml;;
-FC:\Users\berdn\source\repos\Altre\Altre\Pages\PaymentPage.xaml;;
-FC:\Users\berdn\source\repos\Altre\Altre\Pages\ReportPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\App.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Frames\MenuAdminFrame.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Frames\MenuFrame.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\MainWindow.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\AddEdit\PositionsEditPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\AddEdit\UserEditPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\Choosen\EmployeeChoosenPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\AddEdit\EmployeeEditPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\EmployeesPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\LoginPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\Choosen\PaymentChoosenPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\PaymentPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\PositionsPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\ReportPage.xaml;;
+FC:\Users\berdn\Documents\GitHub\Diplomin\Altre\Pages\UsersPage.xaml;;
 

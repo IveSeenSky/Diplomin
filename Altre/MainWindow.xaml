@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Altre"
-        mc:Ignorable="d"
-        Title="DecZip"
+        mc:Ignorable="d" 
+        Title="Altre" Icon="\Resources\logo.png"
         Height="900" Width="1300" 
         MinHeight="300" MinWidth="850">
 
@@ -15,17 +15,25 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" MaxWidth="200"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*" MaxWidth="250"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
-        
+
+        <Image MaxWidth="250" 
+               Source="\Resources\fullLogo.png"
+               Margin="10 1" 
+               HorizontalAlignment="Left"
+               x:Name="ImageBox"/>
+
+        <!--<Frame Grid.ColumnSpan="2"
+               Background="#c4d4bf"/>-->
+
         <StackPanel Grid.Column="1" Orientation="Horizontal" 
-                    HorizontalAlignment="Right">
+                    HorizontalAlignment="Right" Width="155">
             <Button x:Name="BackBtn"
                     Content="Назад"
                     Click="BackBtn_Click"
-                    Style="{StaticResource ButtonStyleDefault}"/> 
+                    Style="{StaticResource ButtonStyleDefault}"/>
         </StackPanel>
         <Frame x:Name="MainFrame" 
                Grid.Column="1"

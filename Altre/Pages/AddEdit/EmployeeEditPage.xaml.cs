@@ -102,7 +102,7 @@ namespace Altre.Pages
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             bool checkFormat()
@@ -111,7 +111,7 @@ namespace Altre.Pages
                 if (string.IsNullOrEmpty(firstNameBx.Text))
                 {
                     MessageBox.Show("Ошибка сохранения данных: " +
-                                    "неверный формат данных в строке имени",
+                                    "пустое значение в строке имени",
                                     "Ошибка",
                                     MessageBoxButton.OK,
                                     MessageBoxImage.Error);
@@ -147,31 +147,6 @@ namespace Altre.Pages
                 { 
                     MessageBox.Show("Ошибка сохранения данных: " +
                                     "неверный формат номера телефона" + "\n" + "Пример: 9009201282",
-                                    "Ошибка",
-                                    MessageBoxButton.OK,
-                                    MessageBoxImage.Error);
-                    return false;
-                }
-
-                //Год рождения
-                else if (string.IsNullOrEmpty(birthdayBx.Text) ||
-                    phoneNumberBx.Text.Contains("$") ||
-                    phoneNumberBx.Text.Contains("?") ||
-                    phoneNumberBx.Text.Contains("%"))
-                {
-                    MessageBox.Show("Ошибка сохранения данных: " +
-                                    "неверный формат даты рождения" + "\n" + "Пример: 01.01.2000",
-                                    "Ошибка",
-                                    MessageBoxButton.OK,
-                                    MessageBoxImage.Error);
-                    return false;
-                }
-
-                //Почта
-                else if (string.IsNullOrEmpty(birthdayBx.Text))
-                {
-                    MessageBox.Show("Ошибка сохранения данных: " +
-                                    "пустое значение в строке почты",
                                     "Ошибка",
                                     MessageBoxButton.OK,
                                     MessageBoxImage.Error);

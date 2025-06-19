@@ -83,7 +83,7 @@
     <Property Name="position_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="job_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="salary_range_min" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="salary_range_max" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="salary_range_max" Type="String" Nullable="false" />
     <NavigationProperty Name="Departments" Relationship="Self.FK_Positions_Departments" FromRole="Positions" ToRole="Departments" />
     <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Positions" FromRole="Positions" ToRole="Employee" />
   </EntityType>

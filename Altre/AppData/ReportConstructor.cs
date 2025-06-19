@@ -47,11 +47,30 @@ namespace Altre.AppData
             sheet.Cells[3, 15] = "Сумма выплаты";
 
             // Данные
-            var payments = ConnectionDB.GetCont().Payments
+            var paymen = ConnectionDB.GetCont().Payments
                 .Where(p => p.payment_date >= startDate && p.payment_date <= endDate)
                 .OrderBy(p => p.Employee.last_name)
                 .ThenBy(p => p.payment_date)
                 .ToList();
+
+
+            List<Payments> payments = new List<Payments>();
+
+            if (Currect.curUser.perms_id != 0)
+            {
+                foreach (var item in paymen)
+                {
+
+                    var CurEmpl = ConnectionDB.GetCont().Employee.FirstOrDefault(y => y.employee_id == item.employee_id);
+                    var curDep = ConnectionDB.GetCont().Departments.FirstOrDefault(z => z.department_id == Currect.curDepartment.department_id);
+                    if(curDep != null)
+                        payments.Add(item);
+                }
+            }
+            else
+            {
+                payments = paymen.ToList();
+            }
 
             // Заполнение данных
             int currentRow = 4;

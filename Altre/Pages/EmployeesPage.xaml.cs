@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,8 @@ namespace Altre.Pages
 
         public void UpdateLV()
         {
-            if (Currect.curUser != null)
+            if (Currect.curUser != null && 
+                Currect.curUser.perms_id != 0)
             {
                 Currect.EmployeeList = new List<Employee>();
                 foreach (var item in ConnectionDB.context.Employee)
@@ -49,7 +51,7 @@ namespace Altre.Pages
                 }
                 EmplLV.ItemsSource = Currect.EmployeeList;
             } 
-            else if (Currect.curUser.user_id == 5)
+            else if (Currect.curUser.perms_id == 0)
             {
                 EmplLV.ItemsSource = ConnectionDB.GetCont().Employee.ToList();
             }
@@ -74,6 +76,89 @@ namespace Altre.Pages
         {
             Currect.selEmployee = (Employee)(sender as Button).DataContext as Employee;
             Nav.MFrame.Navigate(new EmployeeChoosenPage(Currect.selEmployee));
+        }
+
+        private void DelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var delProd = EmplLV.SelectedItems.Cast<Employee>().ToList();
+                foreach (var item in delProd)
+                {
+                    if (ConnectionDB.GetCont().PermConct.Any(x => x.employee_id == item.employee_id) ||
+                        ConnectionDB.GetCont().Payments.Any(x => x.employee_id == item.employee_id)) 
+                    {
+                        MessageBox.Show("Данные используются в другой таблице");
+                        return;
+                    }
+                }
+                if (MessageBox.Show("Удалить " + delProd.Count + " записей", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    ConnectionDB.GetCont().Employee.RemoveRange(delProd);
+                    ConnectionDB.GetCont().SaveChanges();
+                    MessageBox.Show("Данные удалены");
+                }
+            }
+            catch { }
+        }
+
+        private void UpdateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateLV();
+            ImgImport(@"..\..\Photos");
+        }
+
+        public static void ImgImport(string st)
+        {
+            try
+            {
+                var context = ConnectionDB.GetCont();
+                var images = Directory.GetFiles(System.IO.Path.GetFullPath(st));
+                var employees = context.Employee.ToList();
+
+                foreach (var empl in employees)
+                {
+                    if (string.IsNullOrEmpty(empl.photopath))
+                        continue;
+
+                    var matchingImage = images.FirstOrDefault(x => x.Contains(empl.photopath));
+                    if (matchingImage != null)
+                    {
+                        try
+                        {
+                            empl.photo = File.ReadAllBytes(matchingImage);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ошибка при чтении файла для сотрудника {empl.last_name}: {ex.Message}");
+                        }
+                    }
+                }
+                context.SaveChanges();
+            } catch { }
+        }
+
+        private void SearchBx_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                if (Currect.curUser.perms_id == 0)
+                {
+                    EmplLV.ItemsSource = ConnectionDB.GetCont().Employee.Where(x => x.first_name.Contains(SearchBx.Text) ||
+                                                                                    x.middle_name.Contains(SearchBx.Text) ||
+                                                                                    x.last_name.Contains(SearchBx.Text)).ToList();
+                }
+                else
+                {
+                    EmplLV.ItemsSource = Currect.EmployeeList.Where(x => x.first_name.Contains(SearchBx.Text) ||
+                                                                         x.middle_name.Contains(SearchBx.Text) ||
+                                                                         x.last_name.Contains(SearchBx.Text)).ToList();
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }

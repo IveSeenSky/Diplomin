@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         
         <ListView x:Name="EmplLV" 
-                  HorizontalContentAlignment="Stretch">
+                  HorizontalContentAlignment="Stretch" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid x:Name="MGrid">
@@ -39,7 +39,8 @@
                         </Image>
 
                         <StackPanel Orientation="Vertical"
-                                    Grid.Column="1">
+                                    Grid.Column="1"
+                                    Margin="5 0">
                             <TextBlock Text="{Binding last_name}"/>
                             <TextBlock Text="{Binding first_name}"/>
                             <TextBlock Text="{Binding middle_name}"/>
@@ -55,7 +56,8 @@
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical"
-                                    Grid.Column="3">
+                                    Grid.Column="3"
+                                    HorizontalAlignment="Right">
                             <Button x:Name="InfoBtn"
                                     Content="Подробнее"
                                     Style="{StaticResource ButtonStyleDefault}"
@@ -77,11 +79,18 @@
             <Button x:Name="AddBtn"
                     Content="Добавить"
                     Style="{StaticResource ButtonStyleDefault}" Click="AddBtn_Click"/>
+            <Button x:Name="DelBtn"
+                    Content="Удалить"
+                    Style="{StaticResource ButtonStyleDefault}" Click="DelBtn_Click"/>
             <Button x:Name="FcBtn"
                     Content="История выплат"
                     Style="{StaticResource ButtonStyleDefault}" Click="FcBtn_Click"/>
             <TextBox x:Name="SearchBx"
-                     Width="150" Margin="5 5"/>
+                     Width="150" Margin="5 5" TextChanged="SearchBx_TextChanged"/>
+            <Button x:Name="UpdateBtn"
+                    Content="История выплат"
+                    Style="{StaticResource ButtonStyleDefault}"
+                    Click="UpdateBtn_Click"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -25,7 +25,7 @@ namespace Altre.AppData
         public string position_name { get; set; }
         public string job_description { get; set; }
         public decimal salary_range_min { get; set; }
-        public string salary_range_max { get; set; }
+        public decimal salary_range_max { get; set; }
     
         public virtual Departments Departments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

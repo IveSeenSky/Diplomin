@@ -33,8 +33,11 @@ namespace Altre.Pages
             {
                 Currect.curUser = ConnectionDB.GetCont().Users.FirstOrDefault(x => x.username == LoginBx.Text && x.password == PasswordBx.Password);
                 Nav.Fullframe.Visibility = Visibility.Collapsed;
+                if (Currect.curUser.perms_id != 0)
+                    Nav.TFrame.Navigate(new MenuFrame());
+                else 
+                    Nav.TFrame.Navigate(new MenuAdminFrame());
                 Nav.MFrame.Navigate(new EmployeesPage());
-                Nav.TFrame.Navigate(new MenuFrame());
             }
         }
     }

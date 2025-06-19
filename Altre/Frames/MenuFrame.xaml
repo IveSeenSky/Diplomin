@@ -16,10 +16,10 @@
         <StackPanel>
             <Button x:Name="EmplBtn"
                     Content="Сотрудники"
-                    Style="{StaticResource ButtonMenuStyle}"/>
+                    Style="{StaticResource ButtonMenuStyle}" Click="EmplBtn_Click"/>
             <Button x:Name="PmntBtn"
                     Content="Выплаты"
-                    Style="{StaticResource ButtonMenuStyle}"/>
+                    Style="{StaticResource ButtonMenuStyle}" Click="PmntBtn_Click"/>
             <Button x:Name="RprtBtn"
                     Content="Отчёты"
                     Style="{StaticResource ButtonMenuStyle}" Click="RprtBtn_Click"/>

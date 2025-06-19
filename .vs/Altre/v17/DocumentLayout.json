@@ -1,0 +1,420 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\appdata\\reportconstructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\appdata\\reportconstructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\appdata\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\appdata\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\reportpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\reportpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\employeespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\employeespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\employeespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\employeespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\frames\\menuadminframe.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\frames\\menuadminframe.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\reportpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\reportpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\addedit\\usereditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\addedit\\usereditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\addedit\\usereditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\addedit\\usereditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\frames\\menuadminframe.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\frames\\menuadminframe.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\userspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\userspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\positionspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\positionspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\addedit\\employeeeditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\addedit\\employeeeditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\addedit\\employeeeditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\addedit\\employeeeditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\addedit\\positionseditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\addedit\\positionseditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\addedit\\positionseditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\addedit\\positionseditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\appdata\\customemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\appdata\\customemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\appdata\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\appdata\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\userspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\userspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\appdata\\modelbase.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\appdata\\modelbase.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|c:\\users\\berdn\\documents\\github\\diplomin\\altre\\pages\\positionspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB786841-505C-4454-9984-E3F341321F24}|Altre\\Altre.csproj|solutionrelative:altre\\pages\\positionspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 464,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReportConstructor.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\ReportConstructor.cs",
+              "RelativeDocumentMoniker": "Altre\\AppData\\ReportConstructor.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\ReportConstructor.cs",
+              "RelativeToolTip": "Altre\\AppData\\ReportConstructor.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAEMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T12:14:55.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeesPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\EmployeesPage.xaml.cs",
+              "RelativeDocumentMoniker": "Altre\\Pages\\EmployeesPage.xaml.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\EmployeesPage.xaml.cs",
+              "RelativeToolTip": "Altre\\Pages\\EmployeesPage.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T12:10:10.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmployeesPage.xaml",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\EmployeesPage.xaml",
+              "RelativeDocumentMoniker": "Altre\\Pages\\EmployeesPage.xaml",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\EmployeesPage.xaml",
+              "RelativeToolTip": "Altre\\Pages\\EmployeesPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-19T12:10:08.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Reports.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\Reports.cs",
+              "RelativeDocumentMoniker": "Altre\\AppData\\Reports.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\Reports.cs",
+              "RelativeToolTip": "Altre\\AppData\\Reports.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T11:49:50.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuAdminFrame.xaml",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Frames\\MenuAdminFrame.xaml",
+              "RelativeDocumentMoniker": "Altre\\Frames\\MenuAdminFrame.xaml",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Frames\\MenuAdminFrame.xaml",
+              "RelativeToolTip": "Altre\\Frames\\MenuAdminFrame.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-19T11:45:46.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MenuAdminFrame.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Frames\\MenuAdminFrame.xaml.cs",
+              "RelativeDocumentMoniker": "Altre\\Frames\\MenuAdminFrame.xaml.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Frames\\MenuAdminFrame.xaml.cs",
+              "RelativeToolTip": "Altre\\Frames\\MenuAdminFrame.xaml.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAYwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T11:45:40.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Pages\\PositionsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\PositionsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Altre\\Pages\\PositionsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\PositionsPage.xaml.cs",
+              "RelativeToolTip": "Altre\\Pages\\PositionsPage.xaml.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T10:54:06.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReportPage.xaml",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\ReportPage.xaml",
+              "RelativeDocumentMoniker": "Altre\\Pages\\ReportPage.xaml",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\ReportPage.xaml",
+              "RelativeToolTip": "Altre\\Pages\\ReportPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-19T10:53:55.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\ReportPage.xaml.cs",
+              "RelativeDocumentMoniker": "Altre\\Pages\\ReportPage.xaml.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\ReportPage.xaml.cs",
+              "RelativeToolTip": "Altre\\Pages\\ReportPage.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T10:53:54.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmployeeEditPage.xaml",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\EmployeeEditPage.xaml",
+              "RelativeDocumentMoniker": "Altre\\Pages\\AddEdit\\EmployeeEditPage.xaml",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\EmployeeEditPage.xaml",
+              "RelativeToolTip": "Altre\\Pages\\AddEdit\\EmployeeEditPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-19T10:52:40.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EmployeeEditPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\EmployeeEditPage.xaml.cs",
+              "RelativeDocumentMoniker": "Altre\\Pages\\AddEdit\\EmployeeEditPage.xaml.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\EmployeeEditPage.xaml.cs",
+              "RelativeToolTip": "Altre\\Pages\\AddEdit\\EmployeeEditPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T10:52:39.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PositionsEditPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\PositionsEditPage.xaml.cs",
+              "RelativeDocumentMoniker": "Altre\\Pages\\AddEdit\\PositionsEditPage.xaml.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\PositionsEditPage.xaml.cs",
+              "RelativeToolTip": "Altre\\Pages\\AddEdit\\PositionsEditPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T10:52:36.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CustomEmployee.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\CustomEmployee.cs",
+              "RelativeDocumentMoniker": "Altre\\AppData\\CustomEmployee.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\CustomEmployee.cs",
+              "RelativeToolTip": "Altre\\AppData\\CustomEmployee.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T10:48:33.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\Employee.cs",
+              "RelativeDocumentMoniker": "Altre\\AppData\\Employee.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\Employee.cs",
+              "RelativeToolTip": "Altre\\AppData\\Employee.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T10:44:43.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserEditPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\UserEditPage.xaml.cs",
+              "RelativeDocumentMoniker": "Altre\\Pages\\AddEdit\\UserEditPage.xaml.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\UserEditPage.xaml.cs",
+              "RelativeToolTip": "Altre\\Pages\\AddEdit\\UserEditPage.xaml.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAYwDAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T10:43:21.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserEditPage.xaml",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\UserEditPage.xaml",
+              "RelativeDocumentMoniker": "Altre\\Pages\\AddEdit\\UserEditPage.xaml",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\UserEditPage.xaml",
+              "RelativeToolTip": "Altre\\Pages\\AddEdit\\UserEditPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-19T10:43:19.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PositionsEditPage.xaml",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\PositionsEditPage.xaml",
+              "RelativeDocumentMoniker": "Altre\\Pages\\AddEdit\\PositionsEditPage.xaml",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\AddEdit\\PositionsEditPage.xaml",
+              "RelativeToolTip": "Altre\\Pages\\AddEdit\\PositionsEditPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-19T10:43:16.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsersPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\UsersPage.xaml.cs",
+              "RelativeDocumentMoniker": "Altre\\Pages\\UsersPage.xaml.cs",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\UsersPage.xaml.cs",
+              "RelativeToolTip": "Altre\\Pages\\UsersPage.xaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T10:43:01.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UsersPage.xaml",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\UsersPage.xaml",
+              "RelativeDocumentMoniker": "Altre\\Pages\\UsersPage.xaml",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\UsersPage.xaml",
+              "RelativeToolTip": "Altre\\Pages\\UsersPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-19T10:42:49.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PositionsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\PositionsPage.xaml",
+              "RelativeDocumentMoniker": "Altre\\Pages\\PositionsPage.xaml",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\Pages\\PositionsPage.xaml",
+              "RelativeToolTip": "Altre\\Pages\\PositionsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-19T10:42:10.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ModelBase.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\ModelBase.edmx",
+              "RelativeDocumentMoniker": "Altre\\AppData\\ModelBase.edmx",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\AppData\\ModelBase.edmx [Diagram1]",
+              "RelativeToolTip": "Altre\\AppData\\ModelBase.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-06-19T10:40:19.015Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\App.config",
+              "RelativeDocumentMoniker": "Altre\\App.config",
+              "ToolTip": "C:\\Users\\berdn\\Documents\\GitHub\\Diplomin\\Altre\\App.config",
+              "RelativeToolTip": "Altre\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAADYAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-06-19T10:39:18.676Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 166,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 46,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

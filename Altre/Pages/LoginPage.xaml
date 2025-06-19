@@ -9,6 +9,8 @@
       Title="LoginPage">
 
     <Grid>
+        <Frame Background="White"/>
+
         <StackPanel VerticalAlignment="Center"
                     HorizontalAlignment="Center">
             <Label Content="Войдите в аккаунт"
@@ -21,8 +23,9 @@
                        Style="{StaticResource TextBlockLoginStyle}"/>
             <PasswordBox x:Name="PasswordBx"/>
             <Button x:Name="LoginBtn"
+                    Style="{StaticResource ButtonStyleDefault}"
                     Content="Войти"
-                    Margin="5 5 5 80" Click="LoginBtn_Click"/>
+                    Margin="5 10 5 5" Click="LoginBtn_Click"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -9,7 +9,7 @@
       Title="PaymentPage">
 
     <Grid>
-        <ListView x:Name="pmntLV" HorizontalContentAlignment="Stretch">
+        <ListView x:Name="pmntLV" HorizontalContentAlignment="Stretch" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -34,6 +34,7 @@
                             <TextBlock Text="{Binding amount, StringFormat=\{0:N\} руб.}"/>
                         </StackPanel>
                         <StackPanel Grid.Column="3"
+                                    HorizontalAlignment="Right"
                                     Orientation="Horizontal">
                             <Button x:Name="InfoBtn"
                                     Content="Подробнее"
